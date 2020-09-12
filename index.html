@@ -1,0 +1,88 @@
+<style media="screen">
+  body{
+    background:black;
+  }
+  .header{
+    display: flex;
+    flex-direction:row;
+    position: fixed;
+    top: 37px;
+    right: 15vw;
+    z-index: 99;
+    transition: .4s ease top;
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    display: inline-block;
+  }
+  li a{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    padding-right: 90px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: block;
+  }
+  li a:hover{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s color;
+  }
+  ul li a:hover span {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  li a span{
+    color: white;
+    font-weight: 400;
+    -webkit-transition: color .4s ease;
+    -o-transition: color .4s ease;
+    transition: color .4s ease;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    position: relative;
+    display: inline-block;
+  }
+  li a span:before{
+    content: attr(hover-text);
+    position: absolute;
+    top: 100%;
+    font-weight: 600;
+    color: white;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+</style>
+<body>
+  <header class="header">
+    <ul class="ul">
+      <li>
+         <a href="#" >
+           <span hover-text="Akram">  Akram</span>
+         </a>
+       </li>
+       <li>
+          <a href="#" >
+            <span hover-text="Tony">  Tony</span>
+          </a>
+        </li>
+        <li>
+           <a href="#" >
+             <span hover-text="Test">  Test</span>
+           </a>
+         </li>
+         <li>
+            <a href="#" >
+              <span hover-text="Home">  Home</span>
+            </a>
+          </li>
+    </ul>
+  </header>
+</body>
